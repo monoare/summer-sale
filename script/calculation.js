@@ -1,4 +1,5 @@
 // get price of different products
+
 /* Product-1 */
 function calculatePriceOfProduct1() {
   const productPrice1 = getInputValue("product-price-1");
@@ -33,6 +34,17 @@ function calculatePriceOfProduct2() {
   console.log(previousPrice2);
   const totalProductPrice2 = setElementInnerText("total-price", previousPrice2);
   addProductName("add-product-name", "product-name-2");
+
+  const makePurchaseButton = document.getElementById("make-purchase-button");
+  if (previousPrice2 > 0) {
+    makePurchaseButton.disabled = false;
+  }
+
+  const myButton = document.getElementById("apply-button");
+  if (previousPrice2 >= 100) {
+    myButton.disabled = false;
+  }
+
   return totalProductPrice2;
 }
 /* Product-3 */
@@ -45,6 +57,17 @@ function calculatePriceOfProduct3() {
   console.log(previousPrice3);
   const totalProductPrice3 = setElementInnerText("total-price", previousPrice3);
   addProductName("add-product-name", "product-name-3");
+
+  const makePurchaseButton = document.getElementById("make-purchase-button");
+  if (previousPrice3 > 0) {
+    makePurchaseButton.disabled = false;
+  }
+
+  const myButton = document.getElementById("apply-button");
+  if (previousPrice3 >= 100) {
+    myButton.disabled = false;
+  }
+
   return totalProductPrice3;
 }
 /* Product-4 */
@@ -57,6 +80,17 @@ function calculatePriceOfProduct4() {
   console.log(previousPrice4);
   const totalProductPrice4 = setElementInnerText("total-price", previousPrice4);
   addProductName("add-product-name", "product-name-4");
+
+  const makePurchaseButton = document.getElementById("make-purchase-button");
+  if (previousPrice4 > 0) {
+    makePurchaseButton.disabled = false;
+  }
+
+  const myButton = document.getElementById("apply-button");
+  if (previousPrice4 >= 100) {
+    myButton.disabled = false;
+  }
+
   return totalProductPrice4;
 }
 /* Product-5 */
@@ -69,6 +103,17 @@ function calculatePriceOfProduct5() {
   console.log(previousPrice5);
   const totalProductPrice5 = setElementInnerText("total-price", previousPrice5);
   addProductName("add-product-name", "product-name-5");
+
+  const makePurchaseButton = document.getElementById("make-purchase-button");
+  if (previousPrice5 > 0) {
+    makePurchaseButton.disabled = false;
+  }
+
+  const myButton = document.getElementById("apply-button");
+  if (previousPrice5 >= 100) {
+    myButton.disabled = false;
+  }
+
   return totalProductPrice5;
 }
 /* Product-6 */
@@ -81,6 +126,17 @@ function calculatePriceOfProduct6() {
   console.log(previousPrice6);
   const totalProductPrice6 = setElementInnerText("total-price", previousPrice6);
   addProductName("add-product-name", "product-name-6");
+
+  const makePurchaseButton = document.getElementById("make-purchase-button");
+  if (previousPrice6 > 0) {
+    makePurchaseButton.disabled = false;
+  }
+
+  const myButton = document.getElementById("apply-button");
+  if (previousPrice6 >= 100) {
+    myButton.disabled = false;
+  }
+
   return totalProductPrice6;
 }
 // Function for Make Purchase
