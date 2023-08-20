@@ -114,7 +114,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">K. Accessories</h2>
+                  <h2 id="product-name-1" class="card-title py-2">
+                    K. Accessories
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-1">39.00</span>
                     <span>TK</span>
@@ -164,7 +166,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">K. Accessories</h2>
+                  <h2 id="product-name-2" class="card-title py-2">
+                    K. Accessories
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-2">25.00</span>
                     <span>TK</span>
@@ -214,7 +218,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">Home Cooker</h2>
+                  <h2 id="product-name-3" class="card-title py-2">
+                    Home Cooker
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-3">49.00</span><span>TK</span>
                   </p>
@@ -270,7 +276,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">Sports Back Cap</h2>
+                  <h2 id="product-name-4" class="card-title py-2">
+                    Sports Back Cap
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-4">49.00</span><span>TK</span>
                   </p>
@@ -319,7 +327,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">Full Jersey Set</h2>
+                  <h2 id="product-name-5" class="card-title py-2">
+                    Full Jersey Set
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-5">69.00</span>
                     <span>TK</span>
@@ -369,7 +379,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <h2 class="card-title py-2">Sports cates</h2>
+                  <h2 id="product-name-6" class="card-title py-2">
+                    Sports cates
+                  </h2>
                   <p class="text-[ #11111180] text-xl pb-5">
                     <span id="product-price-6">159.00</span>
                     <span>TK</span>
@@ -392,34 +404,54 @@
             <div class="form-control scale-75 md:scale-100">
               <label class="input-group">
                 <input
+                  id="input-coupon-field"
                   type="text"
                   placeholder="Coupon code"
                   class="input input-bordered w-10/12 md:w-full"
                 />
-                <span
-                  disabled="disabled"
+                <button
+                  id="apply-button"
                   class="btn bg-[#E527B2] text-white text-xl font-semibold"
-                  >Apply</span
+                  disabled
+                  onclick="coupon()"
                 >
+                  Apply
+                </button>
               </label>
             </div>
           </div>
 
           <!-- Purchase -->
           <div class="mt-6 p-6 bg-white relative rounded-lg">
-            <div class="pb-4"></div>
+            <div id="add-product-name" class="pb-4"></div>
             <hr />
             <div
               class="text-lg md:text-2xl font-medium pt-3 pb-6 scale-75 md:scale-100"
             >
-              <p>Total Price: <span class="text-gray-400">00.00</span> TK</p>
-              <p>Discount: <span class="text-gray-400">00.00</span> TK</p>
-              <p>Total: <span class="text-gray-400">00.00</span> TK</p>
+              <p>
+                Total Price:
+                <span id="total-price" class="text-gray-400">00.00</span> TK
+              </p>
+              <p>
+                Discount:
+                <span class="text-gray-400"
+                  ><span id="discount-price">00.00</span></span
+                >
+                TK
+              </p>
+              <p>
+                Total:
+                <span class="text-gray-400"
+                  ><span id="price-after-discount">00.00</span></span
+                >
+                TK
+              </p>
             </div>
             <hr />
             <div class="top-10 -mt-4 relative">
               <button
                 onclick="my_modal_1.showModal()"
+                id="make-purchase-button"
                 disabled="disabled"
                 class="btn bg-[#E527B2] text-white h-14 text-xl font-semibold hover:bg-pink-500 w-full scale-75 md:scale-100 capitalize"
               >
@@ -447,6 +479,7 @@
               <div class="modal-action flex justify-center">
                 <!-- if there is a button in form, it will close the modal -->
                 <button
+                  onclick="resetDataAndGoHome()"
                   class="btn bg-[#E527B2] hover:bg-pink-500 scale-75 md:scale-100"
                 >
                   Go Home
